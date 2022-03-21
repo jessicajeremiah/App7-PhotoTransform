@@ -156,11 +156,11 @@
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here.", 10, 20);
+        var canvas = document.getElementById('myCanvas'); // loads canvas 
+        var context = canvas.getContext("2d"); // loads context for canvas
+        context.font = '20pt Calibri'; // font for text
+        context.fillStyle = "black"; // color for text
+        context.fillText("Original image will go here.", 10, 20); //text
       </script>
 
     
@@ -168,11 +168,11 @@
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         
        /* applied changes to variables to correlate with secondCanvas variable */
-        var secondCanvas = document.getElementById('secondCanvas');
-        var secondContext = secondCanvas.getContext("2d");
-        secondContext.font = '20pt Calibri';
-        secondContext.fillStyle = "black";
-        secondContext.fillText("Second image goes here.", 10, 20);
+        var secondCanvas = document.getElementById('secondCanvas'); // loads canvas 
+        var secondContext = secondCanvas.getContext("2d"); // loads context for canvas 
+        secondContext.font = '20pt Calibri'; //font for text
+        secondContext.fillStyle = "black";   // color for text
+        secondContext.fillText("Second image goes here.", 10, 20); //text 
       </script>
      
      
