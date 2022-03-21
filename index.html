@@ -163,9 +163,11 @@
         context.fillText("Original image will go here.", 10, 20);
       </script>
 
-     /* applied changes to variables to correlate with secondCanvas variable */
+    
       <canvas id="secondCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+        
+       /* applied changes to variables to correlate with secondCanvas variable */
         var secondCanvas = document.getElementById('secondCanvas');
         var secondContext = secondCanvas.getContext("2d");
         secondContext.font = '20pt Calibri';
