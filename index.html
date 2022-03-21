@@ -100,6 +100,9 @@
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
          
+          
+          /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
+         
          //start of img.onload for second canvas
          var secondCanvas = document.getElementById('secondCanvas'); 
          
@@ -114,13 +117,14 @@
          
          //this code changes the image to blue
         for(var i = 0; i < data.length; i += 4){
-                data[i] = 0;
-                data[i+1] = 0;
+                data[i] = 0; // red won't show if intensity is 0
+                data[i+1] = 0; // green won't show if intensity is 0
          
         }
-        
-         secondContext.putImageData(imageData,0,0); 
+         
         //all funtions for the second canvas will be applied  
+        secondContext.putImageData(imageData,0,0); 
+        
          
         } // end of img.onload
         
