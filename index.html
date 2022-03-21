@@ -14,7 +14,7 @@
  
   Authors in chronological order of contribution:
   Author 1: Timothy E. Riedel
-  Author 2: ?????????
+  Author 2: Jessica Jeremiah 
   
   References:
   http://docs.webplatform.org/wiki/concepts/programming/drawing_images_onto_canvas#Loading_the_image_programmatically
@@ -24,7 +24,7 @@
   http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   
   Brief Description of Goal of Code:
-  blah, blah, blah,
+  The goal of this code is to have an app take a photo and perform analysis. 
  
   Known Issues:
   blah, blah, blah, blah
@@ -99,12 +99,29 @@
 
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-          /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-          
-          
-          
-          
+         
+         //start of img.onload for second canvas
+         var secondCanvas = document.getElementById('secondCanvas'); 
+         
+         //context for thhe second canvas 
+         var secondContext = secondCanvas.getContext("2d"); 
+         
+         // this retreives the context data for the image
+         var imageData= context.getImageData(0,0,600,500); 
+         
+         // this gets the pixel data of the canvas 
+         var data = imageData.data; 
+         
+         //this code changes the image to blue
+        for(var i = 0; i < data.length; i += 4){
+                data[i] = 0;
+                data[i+1] = 0;
+         
+        }
+        
+         secondContext.putImageData(imageData,0,0); 
+        //all funtions for the second canvas will be applied  
+         
         } // end of img.onload
         
         img.src = reader.result;
