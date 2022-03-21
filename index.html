@@ -124,15 +124,14 @@
          
         //all funtions for the second canvas will be applied  
         secondContext.putImageData(imageData,0,0); 
-        
-         
-        } // end of img.onload for second canvas
+    
+     } // end of img.onload for second canvas
         
         img.src = reader.result;
-      } //  end of reader.onload
+        } //  end of reader.onload
       
       reader.readAsDataURL(file);
-    } // end of the if statement checking that file is an image
+        } // end of the if statement checking that file is an image
     else
     {
       // this is what happens if the orignial file selected is not an image file
@@ -164,6 +163,17 @@
         context.fillText("Original image will go here", 10, 20);
       </script>
 
+     //applied changes to variables to correlate with secondCanvas variable
+      <canvas id="secondCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+        var secondCanvas = document.getElementById('secondCanvas');
+        var secondContext = secondCanvas.getContext("2d");
+        secondContext.font = '20pt Calibri';
+        secondContext.fillStyle = "black";
+        secondContext.fillText("Original image will go here", 10, 20);
+      </script>
+     
+     
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
       <p>DIY Diagnostics</p>
